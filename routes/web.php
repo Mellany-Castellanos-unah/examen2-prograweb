@@ -1,16 +1,30 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MedicamentosController;
+use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\EmpleadoController;
 
-Route::get('/', function () {
-    return view('layout.admin');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+    Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 });
 
-Route::get('/productos', function () {
-    return 'Vista de productos temporal';
-})->name('productos.index');
+Route::middleware('auth')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/', function () {
+        return redirect()->route('dashboard');
+    });
 
-Route::get('/productos/create', function () {
-    return 'Vista de crear producto temporal';
-})->name('productos.create');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+Route::resource('medicamentos', MedicamentoController::class);
+    Route::resource('proveedores', ProveedorController::class);
+    Route::resource('empleados', EmpleadoController::class);
+
+});
