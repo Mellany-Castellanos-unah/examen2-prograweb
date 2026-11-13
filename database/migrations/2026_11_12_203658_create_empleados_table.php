@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
+            $table->string('identidad', 13)->unique();
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('correo')->unique();
+            $table->enum('cargo', ['Regente Farmaceutico', 'Asistente de farmacia', 'jefe de bodega', 'despachador', 'cajero']);
+            $table->decimal('salario', 10, 2);
+            $table->date('fecha_ingreso');
+            $table->enum('estado', ['Activo', 'Inactivo'])->default('Activo');
             $table->timestamps();
         });
     }

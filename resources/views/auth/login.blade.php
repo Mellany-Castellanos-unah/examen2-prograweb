@@ -1,4 +1,3 @@
-<!-- resources/views/auth/login.blade.php -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,6 +22,7 @@
                                 <h3 class="font-weight-light my-2">DISFARMA Honduras</h3>
                                 <small class="text-white-50">Droguería y Distribuidora Farmacéutica San Rafael</small>
                             </div>
+                            <!-- Prueba de admin: admin@disfarma.hn / admin contra: contra123 -->
                             <div class="card-body p-4">
                                 @if (session('success'))
                                     <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">

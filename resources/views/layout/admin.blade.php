@@ -9,7 +9,7 @@
 </head>
 <body class="sb-nav-fixed">
 <!-- NAVBAR SUPERIOR -->
-<nav class="sb-topnav navbar navbar-expand navbar-dark">
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 <a class="navbar-brand ps-3 font-weight-bold d-flex align-items-center" href="{{ route('dashboard') }}">
 <img src="{{ asset('sb-admin/assets/img/disfarma_logo.png') }}" alt="DISFARMA Logo" style="height: 35px; width: auto;" class="me-2">
 <span>DISFARMA</span>
