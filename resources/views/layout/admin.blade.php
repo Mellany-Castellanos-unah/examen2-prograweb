@@ -4,23 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>@yield('titulo', 'Panel Administrativo') - DISFARMA Honduras</title>
-    <!-- Enlace dinámico a CSS con asset() -->
     <link href="{{ asset('sb-admin/css/styles.css') }}" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <style>
-        .sb-topnav.navbar {
-            background-color: #3b5998 !important;
-        }
-        .sb-sidenav-dark {
-            background-color: #2b3e50 !important;
-        }
-        .sb-sidenav-dark .sb-sidenav-menu .nav .nav-link:hover {
-            color: #628bc4 !important;
-        }
-        .sb-sidenav-footer {
-            background-color: #1f2d3d !important;
-        }
-    </style>
 </head>
 <body class="sb-nav-fixed">
 <!-- NAVBAR SUPERIOR -->
@@ -33,7 +18,7 @@
 <i class="fas fa-bars"></i>
 </button>
 
-<!-- Menú de Usuario y Cierre de Sesión en la Barra Superior -->
+
 <ul class="navbar-nav ms-auto me-3 me-lg-4">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,7 +42,6 @@
 </nav>
 
 <div id="layoutSidenav">
-<!-- SIDEBAR LATERAL -->
 <div id="layoutSidenav_nav">
 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
 <div class="sb-sidenav-menu">
@@ -88,7 +72,7 @@ Empleados y Regentes
 </nav>
 </div>
 
-<!-- CONTENIDO DINÁMICO -->
+
 <div id="layoutSidenav_content">
 <main>
 <div class="container-fluid px-4 mt-4">

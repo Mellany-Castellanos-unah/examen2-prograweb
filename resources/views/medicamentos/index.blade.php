@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('content')
+@section('contenido')
 <div class="container-fluid px-4">
     <h1 class="mt-4"><i class="fas fa-pills text-primary me-2"></i>Gestión de Inventario - Medicamentos</h1>
     <ol class="breadcrumb mb-4">

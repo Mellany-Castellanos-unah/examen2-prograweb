@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('content')
+@section('contenido')
 <div class="container-fluid px-4">
     <h1 class="mt-4"><i class="fas fa-edit text-primary me-2"></i>Editar Medicamento: {{ $medicamento->nombre }}</h1>
     <ol class="breadcrumb mb-4">
