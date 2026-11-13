@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::resource('medicamentos', MedicamentoController::class);
+Route::resource('medicamentos', MedicamentosController::class);
     Route::resource('proveedores', ProveedorController::class);
     Route::resource('empleados', EmpleadoController::class);
 

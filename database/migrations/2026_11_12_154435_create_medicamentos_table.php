@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('medicamentos', function (Blueprint $table) {
             $table->id();
+            $table->string('codigo')->unique(); 
+            $table->string('nombre');
+            $table->enum('categoria', ['Antibioticos', 'Analgesicos', 'Sueros', 'Material Quirurgico', 'Vitaminas']);
+            $table->decimal('precio', 10, 2);
+            $table->decimal('costo', 10, 2);
+            $table->integer('inventario');
+            $table->string('imagen')->nullable();
+            $table->string('laboratorio');
+            $table->date('fecha_vencimiento');
+            $table->timestamp('fecha_registro')->useCurrent();
+            $table->string('numero_lote');
             $table->timestamps();
         });
     }
